@@ -29,7 +29,7 @@
       gated, exactly like reconcile.py).
 
   Two graphs in, one world model out. Stdlib only, no network, no LLM."
-  (:require [clojure.edn :as edn]
+  (:require [kotoba.lang.edn :as edn]
             [clojure.string :as str]))
 
 (def POWER_LEVEL_SUBKIND

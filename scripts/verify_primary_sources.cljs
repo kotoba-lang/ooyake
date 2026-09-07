@@ -36,7 +36,7 @@
 ;; 403 を返すサイトを UA 偽装で抜けない。検索エンジンや第三者サイトで代用しない
 ;; （それでは3次のまま名前を変えるだけになる）。ページに無ければ未確認のまま置く。
 
-(require '[clojure.edn :as edn]
+(require '[kotoba.lang.edn :as edn]
          '[clojure.string :as str]
          '["node:fs" :as fs])
 

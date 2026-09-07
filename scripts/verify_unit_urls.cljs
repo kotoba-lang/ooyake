@@ -27,7 +27,7 @@
 ;;
 ;; 403 を UA 偽装で抜けることはしない。
 
-(require '[clojure.edn :as edn]
+(require '[kotoba.lang.edn :as edn]
          '[clojure.string :as str]
          '["node:fs" :as fs])
 

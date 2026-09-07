@@ -29,7 +29,7 @@
 ;; 取得してから捨てるのではなく、最初から要求しない。G10（never a target-list）は
 ;; 不変なので、個人の所在や日程に類する情報はこの経路に一切載らない。
 
-(require '[clojure.edn :as edn]
+(require '[kotoba.lang.edn :as edn]
          '[clojure.string :as str]
          '["node:fs" :as fs])
 

@@ -16,7 +16,7 @@
 ;; 4. **G5 の provenance が全行に付いている** — sourcing / provenance / last-verified。
 ;;    在任者は変わる事実なので、取得日の無い行は自分の知っている以上を主張する。
 
-(require '[clojure.edn :as edn]
+(require '[kotoba.lang.edn :as edn]
          '[clojure.string :as str]
          '["node:fs" :as fs])
 

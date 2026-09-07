@@ -15,7 +15,7 @@
       + operator enablement required (public-data-only, ToS/rate-limit discipline).
 
   Pure function — no network, no writes (read-side G9)."
-  (:require [clojure.edn :as edn]
+  (:require [kotoba.lang.edn :as edn]
             [clojure.java.io :as io]))
 
 (def ^:private REG_DIR

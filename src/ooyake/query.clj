@@ -25,7 +25,7 @@
   「1,046 名を把握している」に見えるが、当局で裏が取れているのは 185 名で、これは
   別の事実。まとめて1つの数字にすることが、そもそもこの registry が長らく全行
   `:authoritative` を名乗っていた原因だった。"
-  (:require [clojure.edn :as edn]
+  (:require [kotoba.lang.edn :as edn]
             [clojure.java.io :as io]
             [clojure.pprint :as pp]
             [clojure.string :as str]

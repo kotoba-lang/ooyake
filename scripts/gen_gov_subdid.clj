@@ -24,7 +24,7 @@
 ;; Run: bb scripts/gen_gov_subdid.clj
 
 (ns gen-gov-subdid
-  (:require [clojure.edn :as edn]
+  (:require [kotoba.lang.edn :as edn]
             [clojure.string :as str]
             [clojure.java.io :as io]
             [cheshire.core :as json]))

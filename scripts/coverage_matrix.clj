@@ -1,5 +1,5 @@
 (ns coverage-matrix
-  (:require [clojure.edn :as edn]
+  (:require [kotoba.lang.edn :as edn]
             [clojure.java.io :as io]
             [clojure.string :as str]
             [ooyake.coverage :as coverage]))
