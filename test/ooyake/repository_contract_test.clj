@@ -1,5 +1,5 @@
 (ns ooyake.repository-contract-test
-  (:require [clojure.edn :as edn]
+  (:require [kotoba.lang.edn :as edn]
             [clojure.test :refer [deftest is]]))
 
 (deftest standalone-metadata-is-edn
