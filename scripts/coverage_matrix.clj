@@ -1,7 +1,7 @@
 (ns coverage-matrix
   (:require [kotoba.lang.edn :as edn]
             [clojure.java.io :as io]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [ooyake.coverage :as coverage]))
 
 (def registry-dir
@@ -50,7 +50,7 @@
       (let [missing (->> countries
                          (remove #(contains? (get by-country %) category))
                          (take 6)
-                         (map str/upper-case))]
+                         (map str/upper))]
         (println (format "      %-15s %3d  %-28s  gaps: %s"
                          (name category)
                          n
@@ -61,10 +61,10 @@
                      avg
                      (count (coverage/categories))))
     (println (str "    most complete: "
-                  (str/join ", " (map (fn [[n iso]] (str (str/upper-case iso) "(" n ")"))
+                  (str/join ", " (map (fn [[n iso]] (str (str/upper iso) "(" n ")"))
                                       (take 8 completeness)))))
     (println (str "    least complete: "
-                  (str/join ", " (map (fn [[n iso]] (str (str/upper-case iso) "(" n ")"))
+                  (str/join ", " (map (fn [[n iso]] (str (str/upper iso) "(" n ")"))
                                       (take-last 8 completeness)))))))
 
 (when (= *file* (System/getProperty "babashka.file"))

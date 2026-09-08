@@ -30,7 +30,7 @@
 
   Two graphs in, one world model out. Stdlib only, no network, no LLM."
   (:require [kotoba.lang.edn :as edn]
-            [clojure.string :as str]))
+            [kotoba.lang.text :as str]))
 
 (def POWER_LEVEL_SUBKIND
   {":country" ":state"

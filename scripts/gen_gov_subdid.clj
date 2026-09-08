@@ -25,7 +25,7 @@
 
 (ns gen-gov-subdid
   (:require [kotoba.lang.edn :as edn]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [clojure.java.io :as io]
             [cheshire.core :as json]))
 

@@ -21,7 +21,7 @@
                 needs Council Lv6+ + operator + a member/actor signature, §1.12 / G10).
 
   Self-contained. Stdlib only. Deterministic — the seed grows on the mesh, not here."
-  (:require [clojure.string :as str]))
+  (:require [kotoba.lang.text :as str]))
 
 (def disclaimer
   "【観測ミラー / civic wayfinding map — NOT the government, NOT an official channel, 非裁定】")

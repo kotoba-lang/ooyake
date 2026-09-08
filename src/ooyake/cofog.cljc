@@ -4,7 +4,7 @@
   This namespace is pure data + pure functions. It does not claim official
   authority; it gives ooyake a stable government-function vocabulary for
   ministry-level atlas rows."
-  (:require [clojure.string :as str]))
+  (:require [kotoba.lang.text :as str]))
 
 (def cofog-divisions
   {"01" {:cofog/code "01"
@@ -125,7 +125,7 @@
 
 (defn- text-token
   [unit]
-  (str/lower-case
+  (str/lower
    (str (:gov.unit/id unit) " "
         (:gov.unit/name-en unit) " "
         (:gov.unit/name-local unit) " "

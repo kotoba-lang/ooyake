@@ -3,7 +3,7 @@
 
   BPMN remains a legacy/visual interchange reference; the executable planning
   shape is EDN data for langgraph-style state graphs and Pregel supersteps."
-  (:require [clojure.string :as str]))
+  (:require [kotoba.lang.text :as str]))
 
 (def default-graph-version
   "gov-procedure-graph-v1")

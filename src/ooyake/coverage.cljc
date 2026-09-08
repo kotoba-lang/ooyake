@@ -4,7 +4,7 @@
   Coverage here is member-support metadata. It never fabricates units; it only
   derives which functional categories an existing national body can support from
   stable id suffixes, explicit COFOG codes, and conservative name signals."
-  (:require [clojure.string :as str]))
+  (:require [kotoba.lang.text :as str]))
 
 (def category->suffixes
   {:finance #{"finance" "mof" "treasury" "minefi" "mef" "fin" "fazenda"
@@ -107,7 +107,7 @@
 
 (defn- text
   [unit]
-  (str/lower-case
+  (str/lower
    (str (:gov.unit/id unit) " "
         (:gov.unit/name-en unit) " "
         (:gov.unit/name-local unit) " "
