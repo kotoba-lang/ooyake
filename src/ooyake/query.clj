@@ -28,7 +28,7 @@
   (:require [kotoba.lang.edn :as edn]
             [clojure.java.io :as io]
             [clojure.pprint :as pp]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [datascript.core :as d]))
 
 (def ^:private ds-schema-keys
