@@ -37,7 +37,7 @@
 ;; G6 の私的属性・provenance 欠落のいずれかがあれば commit しない。つまり **G6 の境界が
 ;; 自動書き込みのたびに強制される**（人が見たときだけでなく）。
 
-(require '[clojure.string :as str]
+(require '[kotoba.lang.text :as str]
          '["node:child_process" :as cp]
          '["node:path" :as path])
 

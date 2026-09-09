@@ -28,7 +28,7 @@
 ;; 403 を UA 偽装で抜けることはしない。
 
 (require '[kotoba.lang.edn :as edn]
-         '[clojure.string :as str]
+         '[kotoba.lang.text :as str]
          '["node:fs" :as fs])
 
 (def argv (vec *command-line-args*))

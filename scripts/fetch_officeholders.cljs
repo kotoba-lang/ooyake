@@ -30,7 +30,7 @@
 ;; 不変なので、個人の所在や日程に類する情報はこの経路に一切載らない。
 
 (require '[kotoba.lang.edn :as edn]
-         '[clojure.string :as str]
+         '[kotoba.lang.text :as str]
          '["node:fs" :as fs])
 
 (def argv (vec *command-line-args*))
@@ -197,7 +197,7 @@
 (defn- qid-of [uri] (last (str/split uri #"/")))
 
 (defn- slug [s]
-  (-> (str s) str/lower-case (str/replace #"[^a-z0-9]+" "-") (str/replace #"^-|-$" "")))
+  (-> (str s) str/lower (str/replace #"[^a-z0-9]+" "-") (str/replace #"^-|-$" "")))
 
 (defn- today [] (subs (.toISOString (js/Date.)) 0 10))
 
@@ -247,7 +247,7 @@
     (when (and unit label (not (re-matches #"Q\d+" label)))
       (cond-> {:gov.person/id (str "person."
                                    (str/replace (:gov.unit/id unit) #"^gov\." "")
-                                   "." (str/lower-case position-qid))
+                                   "." (str/lower position-qid))
                :gov.person/unit (:gov.unit/id unit)
                :gov.person/jurisdiction (:gov.unit/jurisdiction unit)
                :gov.person/role-en (if (re-matches #"Q\d+" (str position-label))
