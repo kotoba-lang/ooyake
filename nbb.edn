@@ -1,0 +1,20 @@
+;; nbb reads this file and does NOT read deps.edn. The .cljs scripts here are
+;; run as bare `nbb scripts/<name>.cljs` with no --classpath, so a coordinate
+;; that lives only in deps.edn is invisible to them.
+;;
+;; Measured 2026-09-09: `nbb scripts/verify_primary_sources.cljs` answered
+;; "Could not find namespace: kotoba.lang.edn" BEFORE this migration touched
+;; the repo -- so these scripts were already unrunnable, and the migration to
+;; kotoba.lang.text would have added a second namespace to the same hole.
+;; Both coordinates are copied from deps.edn rather than chosen here.
+;;
+;; With both declared the script now LOADS and runs to scripts/
+;; verify_primary_sources.cljs:168, where kotoba.lang.edn refuses the
+;; registry's own EDN with "EDN dispatch forms are forbidden". That is a
+;; third, separate blocker, older than this file and not addressed by it --
+;; written down so the next reader does not take a running `nbb` as proof
+;; that this repo's .cljs verification passes. It does not run yet.
+{:paths ["src"]
+ :deps {io.github.kotoba-lang/text {:git/sha "2ee6dce2ca944decd001f9378868dd703fc3e741"}
+        io.github.kotoba-lang/edn {:git/url "https://github.com/kotoba-lang/edn.git"
+                                   :git/sha "250f4dafa5f5c7fb3109703496a52866e2a62dcd"}}}

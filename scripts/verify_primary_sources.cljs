@@ -37,7 +37,7 @@
 ;; （それでは3次のまま名前を変えるだけになる）。ページに無ければ未確認のまま置く。
 
 (require '[kotoba.lang.edn :as edn]
-         '[clojure.string :as str]
+         '[kotoba.lang.text :as str]
          '["node:fs" :as fs])
 
 (def argv (vec *command-line-args*))
@@ -78,7 +78,7 @@
 
 (defn- normalize [s]
   (-> (str s)
-      str/lower-case
+      str/lower
       ;; アクセント記号を落として比較する（政府サイトの表記ゆれ吸収）。
       (.normalize "NFD")
       (str/replace #"[̀-ͯ]" "")
@@ -98,7 +98,7 @@
                (or (and (>= (count n) 6) (str/includes? t n))
                    (let [surname (last (str/split n #" "))]
                      (and surname (>= (count surname) 4)
-                          (re-find (re-pattern (str "(?:^| )" (str/replace surname #"[.*+?^${}()|\[\]\\]" "\\\\$&") "(?:$| |,|\\.)")) t))))))
+                          (re-find (re-pattern (str "(?:^| )" (str/re-quote surname) "(?:$| |,|\\.)")) t))))))
            candidates))))
 
 (defn check-one [person]

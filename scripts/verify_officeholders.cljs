@@ -17,7 +17,7 @@
 ;;    在任者は変わる事実なので、取得日の無い行は自分の知っている以上を主張する。
 
 (require '[kotoba.lang.edn :as edn]
-         '[clojure.string :as str]
+         '[kotoba.lang.text :as str]
          '["node:fs" :as fs])
 
 (def forbidden-attr-fragments
@@ -44,7 +44,7 @@
       bad-attrs (for [p people
                       a (keys p)
                       f forbidden-attr-fragments
-                      :when (str/includes? (str/lower-case (name a)) f)]
+                      :when (str/includes? (str/lower (name a)) f)]
                   [(:gov.person/id p) a])
       missing-prov (remove #(and (:gov.person/sourcing %)
                                  (:gov.person/provenance %)
