@@ -21,7 +21,7 @@
 ;; Read-only over the ooyake registry. Writes ONLY under scripts/ (this file) and
 ;; public/gov/jpn/**.
 ;;
-;; Run: bb scripts/gen_gov_subdid.clj
+;; Run: bb scripts/gen_gov_subdid.cljk
 
 (ns gen-gov-subdid
   (:require [kotoba.lang.edn :as edn]
@@ -34,7 +34,7 @@
 ;; ---------------------------------------------------------------------------
 
 (def repo-root
-  ;; this file lives at scripts/gen_gov_subdid.clj
+  ;; this file lives at scripts/gen_gov_subdid.cljk
   (-> (io/file *file*) .getAbsoluteFile .getParentFile .getParentFile
       .getParentFile .getParentFile))
 

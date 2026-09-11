@@ -155,7 +155,7 @@ The seed (all LANDED):
 - **seed trigger wiring** — `kotoba.app.edn` `ooyake-social` component (`on-tick "0 */6 * * *"`
   + `on-kse etzhayyim/actor/ooyake/publish`, `:requires #{:cap/kqe :cap/atproto}`).
 
-**ooyake also drives the per-org sub-DID generator**: `scripts/gen_gov_subdid.clj` emits
+**ooyake also drives the per-org sub-DID generator**: `scripts/gen_gov_subdid.cljk` emits
 **78 JP 府省庁 mirror DIDs** under `public/gov/jpn/**` (`did:web:etzhayyim.com:gov:jpn:<…>`,
 mirror-declared, `verificationMethod: []`, `official-url` linked, impersonation-ban honored,
 idempotent). Each per-org unit ooyake atlases can be promoted to a first-class mirror actor

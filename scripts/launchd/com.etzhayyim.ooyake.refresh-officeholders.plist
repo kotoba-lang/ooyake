@@ -8,7 +8,7 @@
      いずれにも GitHub PAT は無い）。等価な Actions 版は
      `.github/workflows-pending/refresh-officeholders.yml` に温存してあり、scope が
      付いた日に `git mv` すれば置き換えられる — どちらも同じ
-     `scripts/refresh-cron.cljs` を叩くだけなので、二重メンテにはならない。
+     `scripts/refresh-cron.cljk` を叩くだけなので、二重メンテにはならない。
 
      launchd の弱点は正直に: このマシンが眠っていれば動かない。
      StartCalendarInterval なので、指定時刻を寝過ごした場合は次の起動時に
@@ -32,7 +32,7 @@
   <key>ProgramArguments</key>
   <array>
     <string>/opt/homebrew/bin/nbb</string>
-    <string>/Users/junkawasaki/.ooyake/refresh-clone/scripts/refresh-cron.cljs</string>
+    <string>/Users/junkawasaki/.ooyake/refresh-clone/scripts/refresh-cron.cljk</string>
   </array>
   <key>WorkingDirectory</key><string>/Users/junkawasaki/.ooyake/refresh-clone</string>
   <key>EnvironmentVariables</key>

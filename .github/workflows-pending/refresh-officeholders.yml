@@ -47,10 +47,10 @@ jobs:
         run: npm install -g nbb@latest
 
       - name: Re-read every office holder from Wikidata
-        run: nbb scripts/fetch_officeholders.cljs
+        run: nbb scripts/fetch_officeholders.cljk
 
       - name: Enforce the registry gate (linkage, uniqueness, G6, provenance)
-        run: nbb scripts/verify_officeholders.cljs
+        run: nbb scripts/verify_officeholders.cljk
 
       - name: Commit if anything changed
         run: |
