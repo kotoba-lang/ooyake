@@ -23,7 +23,7 @@ Owner instruction 2026-07-25 (「公人は記録して ok」/「charter から�
 - **Still unrepresentable**: private/home contact, address, birth data, family,
   finances, health, movements, schedule, religion, party. Those attributes are not
   declared in `gov-officeholders.schema.edn` and not requested from any upstream query —
-  they cannot be present-but-empty. `scripts/verify_officeholders.cljs` fails the build
+  they cannot be present-but-empty. `scripts/verify_officeholders.cljk` fails the build
   if an attribute matching any of them ever appears.
 - **G10 unchanged** (civic wayfinding, never a target-list) and binds every row: this
   answers "who holds this office", never "where is this person". **G11 unchanged**: no

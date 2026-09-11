@@ -1,10 +1,10 @@
 #!/usr/bin/env nbb
-;; scripts/verify_unit_urls.cljs — ooyake 公 — 政府組織の official-url が今も到達するかを
+;; scripts/verify_unit_urls.cljk — ooyake 公 — 政府組織の official-url が今も到達するかを
 ;; 標本で測る（com-junkawasaki/root ADR-2607253400）。
 ;;
-;;   nbb scripts/verify_unit_urls.cljs            # 既定 120 件の標本
-;;   nbb scripts/verify_unit_urls.cljs --all      # 5,986 件すべて（遅い）
-;;   nbb scripts/verify_unit_urls.cljs --sample 300
+;;   nbb scripts/verify_unit_urls.cljk            # 既定 120 件の標本
+;;   nbb scripts/verify_unit_urls.cljk --all      # 5,986 件すべて（遅い）
+;;   nbb scripts/verify_unit_urls.cljk --sample 300
 ;;
 ;; ## なぜ標本か
 ;;
