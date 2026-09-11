@@ -1,8 +1,8 @@
-#!/usr/bin/env nbb
+#!/usr/bin/env kbb
 ;; scripts/verify_officeholders.cljk — ooyake 公 — 公人レジストリの整合ゲート
 ;; （ADR-2607253000）。
 ;;
-;;   nbb scripts/verify_officeholders.cljk
+;;   kbb --backend sci scripts/verify_officeholders.cljk
 ;;
 ;; 4つだけ検査する。どれも「壊れていたら静かに嘘になる」種類のもの。
 ;;

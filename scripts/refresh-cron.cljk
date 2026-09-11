@@ -1,4 +1,4 @@
-#!/usr/bin/env nbb
+#!/usr/bin/env kbb
 ;; scripts/refresh-cron.cljk — ooyake 公 — 週次の feed 再測定を無人で回す
 ;; （com-junkawasaki/root ADR-2607253200）。
 ;;

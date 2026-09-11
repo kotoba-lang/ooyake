@@ -1,5 +1,5 @@
 ;; ooyake 公 — gov-officeholders.courts.edn — 現職の公職者（公人）。自動生成、手編集しない。
-;; 生成: nbb scripts/fetch_officeholders.cljk courts   (2026-09-06)
+;; 生成: kbb --backend sci scripts/fetch_officeholders.cljk courts   (2026-09-06)
 ;; 出典: Wikidata（P35 元首 / P6 政府首脳 / P488 議長 / P1037 長 / P169 CEO /
 ;;       P1308 現職者）。P582(終了日) を持つ statement と deprecated rank は除外
 ;;       済み＝取得時点の現職のみ。:gov.person/last-verified がその取得日。

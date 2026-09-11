@@ -1,10 +1,10 @@
-#!/usr/bin/env nbb
+#!/usr/bin/env kbb
 ;; scripts/verify_primary_sources.cljk — ooyake 公 — 公人の在任を **当局自身のページ**で
 ;; 裏取りし、確認できた行だけを :third-party → :authoritative へ昇格させる
 ;; （com-junkawasaki/root ADR-2607253400）。
 ;;
-;;   nbb scripts/verify_primary_sources.cljk            # 測るだけ
-;;   nbb scripts/verify_primary_sources.cljk --apply    # 昇格を registry に書き戻す
+;;   kbb --backend sci scripts/verify_primary_sources.cljk            # 測るだけ
+;;   kbb --backend sci scripts/verify_primary_sources.cljk --apply    # 昇格を registry に書き戻す
 ;;
 ;; ## なぜ要るか
 ;;

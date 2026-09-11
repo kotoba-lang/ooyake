@@ -2,10 +2,10 @@
   "query.clj — ooyake 公 の registry を DataScript にロードして datalog で問い合わせる
   CLI（com-junkawasaki/root ADR-2607253400 の follow-up）。
 
-      clojure -M:query count
-      clojure -M:query coverage
-      clojure -M:query holders --jurisdiction jpn
-      clojure -M:query q '[:find ?name ?unit
+      kbb -M:query count
+      kbb -M:query coverage
+      kbb -M:query holders --jurisdiction jpn
+      kbb -M:query q '[:find ?name ?unit
                            :where [?p :gov.person/name-en ?name]
                                   [?p :gov.person/unit ?uid]
                                   [?u :gov.unit/id ?uid]
@@ -13,7 +13,7 @@
 
   ## なぜ要るか
 
-  kawaraban には `clojure -M:query` があり、ooyake には無かった。7,089 の政府組織と
+  kawaraban には `kbb -M:query` があり、ooyake には無かった。7,089 の政府組織と
   1,046 の公人を持ちながら、それを datalog で引くには各自がローダを書くしかない、
   という非対称。registry は既に datom 形で、`gov-officeholders.schema.edn` という
   transact 可能なスキーマまである——足りなかったのは読み手だけ。
@@ -123,8 +123,8 @@
       "q"
       (if-let [qs (second argv)]
         (pp/pprint (d/q (edn/read-string qs) db))
-        (binding [*out* *err*] (println "usage: clojure -M:query q '<datalog edn>'") (System/exit 2)))
+        (binding [*out* *err*] (println "usage: kbb -M:query q '<datalog edn>'") (System/exit 2)))
 
       (binding [*out* *err*]
-        (println "usage: clojure -M:query count|coverage|holders --jurisdiction <iso3>|q '<datalog>'")
+        (println "usage: kbb -M:query count|coverage|holders --jurisdiction <iso3>|q '<datalog>'")
         (System/exit 2)))))
