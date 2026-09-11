@@ -4,7 +4,7 @@
 # Covers the two gated cell state machines: reconcile + world_model.
 set -euo pipefail
 cd "$(dirname "$0")/../.."
-exec bb -e '(def nss (quote [ooyake.cells.reconcile.test-state-machine
+exec kbb -e '(def nss (quote [ooyake.cells.reconcile.test-state-machine
                              ooyake.cells.world-model.test-state-machine]))
               (apply require (quote clojure.test) nss)
               (let [r (apply clojure.test/run-tests nss)]

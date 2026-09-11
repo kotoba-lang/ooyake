@@ -2,7 +2,7 @@
 ;; run as bare `nbb scripts/<name>.cljs` with no --classpath, so a coordinate
 ;; that lives only in deps.edn is invisible to them.
 ;;
-;; Measured 2026-09-09: `nbb scripts/verify_primary_sources.cljk` answered
+;; Measured 2026-09-09: `kbb --backend sci scripts/verify_primary_sources.cljk` answered
 ;; "Could not find namespace: kotoba.lang.edn" BEFORE this migration touched
 ;; the repo -- so these scripts were already unrunnable, and the migration to
 ;; kotoba.lang.text would have added a second namespace to the same hole.
