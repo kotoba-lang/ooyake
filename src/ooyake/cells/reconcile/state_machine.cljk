@@ -16,7 +16,7 @@
 
   Pure function — no network, no writes (read-side G9)."
   (:require [kotoba.lang.edn :as edn]
-            [clojure.java.io :as io]))
+            [kotoba.io :as io]))
 
 (def ^:private REG_DIR
   (str (io/file (or (System/getProperty "user.dir") ".") "registry")))
