@@ -160,7 +160,7 @@ ontology, populated by no unit, and reconciled by no code. Closed that gap:
 - Hardened into a gate: `scripts/world_model_coverage.py` (confirmed-floor, zero
   dangling, civic-surface-excluded, zero-orphan, well-formed-EDN) + `cells/world_model/
   test_world_model_cell.py` (10 tests). All wired into `deploy/run_tests.sh`.
-- Registered as ooyake's 7th cell (manifest), documented (CLAUDE.md / README).
+- Registered as ooyake's 7th cell (manifest), documented (AGENTS.md / README).
 
 ## 2026-06-03 — statistics + prosecution + revenue (239)
 

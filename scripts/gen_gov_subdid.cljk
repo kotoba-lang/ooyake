@@ -10,7 +10,7 @@
 ;;   50-infra/etzhayyim-did-web/public/gov/jpn/<…>/{did.json,profile.json}
 ;; plus an index at public/gov/jpn/index.json.
 ;;
-;; Constitutional invariants (ooyake CLAUDE.md / ADR-2606021600 §4 impersonation
+;; Constitutional invariants (ooyake AGENTS.md / ADR-2606021600 §4 impersonation
 ;; ban, G3): every emitted record DECLARES the mirror relation, links the body's
 ;; official-url, claims NOTHING on the government's behalf, and carries NO
 ;; server-minted key (verificationMethod []; did:web trust root = TLS).

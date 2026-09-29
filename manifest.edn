@@ -221,7 +221,7 @@
    :murakumo-fleet "No deployment",
    :phase "R0",
    :scope
-   "Ontology + manifest + README + CLAUDE.md + MATURITY.md + gov-units.seed.edn proof-of-model (JP 財務省→国税庁→東京国税局→麹町税務署 + 東京都→新宿区→窓口 + USA/GBR/DEU/KOR/EU rows, all unverified-seed) + 8 Lexicon skeletons + 3 procedures projected to langgraph/Pregel EDN; BPMN model-only legacy views. NO cell runs, NO live ingest, NO served DIDs."}
+   "Ontology + manifest + README + AGENTS.md + MATURITY.md + gov-units.seed.edn proof-of-model (JP 財務省→国税庁→東京国税局→麹町税務署 + 東京都→新宿区→窓口 + USA/GBR/DEU/KOR/EU rows, all unverified-seed) + 8 Lexicon skeletons + 3 procedures projected to langgraph/Pregel EDN; BPMN model-only legacy views. NO cell runs, NO live ingest, NO served DIDs."}
   {:date "post-Bootstrap-Council + Council Lv6+ ≥3",
    :gate "Council Lv6+ ≥3",
    :murakumo-fleet "reuben",
