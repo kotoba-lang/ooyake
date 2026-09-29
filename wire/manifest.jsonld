@@ -126,7 +126,7 @@
     }
   },
   "roadmap": [
-    {"phase": "R0", "date": "2026-06-02", "scope": "Ontology + manifest + README + CLAUDE.md + MATURITY.md + gov-units.seed.edn proof-of-model (JP 財務省→国税庁→東京国税局→麹町税務署 + 東京都→新宿区→窓口 + USA/GBR/DEU/KOR/EU rows, all unverified-seed) + 8 Lexicon skeletons + 3 BPMN (model-only). NO cell runs, NO live ingest, NO served DIDs.", "murakumoFleet": "No deployment", "gate": "ADR-2606021600 (PROPOSED)"},
+    {"phase": "R0", "date": "2026-06-02", "scope": "Ontology + manifest + README + AGENTS.md + MATURITY.md + gov-units.seed.edn proof-of-model (JP 財務省→国税庁→東京国税局→麹町税務署 + 東京都→新宿区→窓口 + USA/GBR/DEU/KOR/EU rows, all unverified-seed) + 8 Lexicon skeletons + 3 BPMN (model-only). NO cell runs, NO live ingest, NO served DIDs.", "murakumoFleet": "No deployment", "gate": "ADR-2606021600 (PROPOSED)"},
     {"phase": "R1", "date": "post-Bootstrap-Council + Council Lv6+ ≥3", "scope": "unit_registry + reconcile live; ingest JP authoritative registries (行政機関コード / 全国地方公共団体コード) → :authoritative; atlas_serve serves searchUnits; /actors search surfaces gov units.", "murakumoFleet": "reuben", "gate": "Council Lv6+ ≥3"},
     {"phase": "R2", "date": "post-R1", "scope": "address_ingest + procedure_link; per-unit civic-atlas did.json served dynamically (kotoba → KV, ADR-2606013800 pattern); findService end-to-end for JP.", "murakumoFleet": "reuben + gad", "gate": "Council Lv6+ ≥4"},
     {"phase": "R3", "date": "post-R2 + 30-day public comment", "scope": "multi-jurisdiction ingest at scale; GeoJSON footprints; danjo/kanae/tsumugi/toritsugi/himotoki consume the live atlas.", "murakumoFleet": "Full 10-node fleet", "gate": "Council Lv6+ ≥4 + 30-day public comment"}

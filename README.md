@@ -91,7 +91,7 @@ the one-per-country dedup. See [`MATURITY.md`](MATURITY.md) (per-iteration recor
 ```
 
 ├── manifest.jsonld              # DID manifest + cells + gates + non-goals
-├── CLAUDE.md / README.md / MATURITY.md
+├── AGENTS.md / README.md / MATURITY.md
 ├── registry/                    # ~30 gov-units*.edn (the canonical EDN data)
 │   ├── gov-officeholders.*.edn      # 公人 — current public office holders, keyed to :gov.unit/id
 │   └── gov-officeholders.schema.edn # :gov.person/* attribute declarations (Datomic/DataScript)
